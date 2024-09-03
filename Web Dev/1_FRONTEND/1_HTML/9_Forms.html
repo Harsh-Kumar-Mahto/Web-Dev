@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Form tag tells that this is a form -->
+ <fieldset>         <!-- This tag bounds the whole code inside this -->
+    <legend>Basic login page example</legend>   <!-- Used to give name to the field -->
+    <form>
+         <!-- Label tag provides label to user and for must be same as id of input -->
+         <label for="email">Enter email id:</label>
+         <!-- Input tag is used to take input,type tells the input type and id is same as for of label -->
+         <input type="text" id="email">
+         <br><br>
+         <label for="password">Enter password</label>
+         <input type="text" id="password">
+         <br><br>
+         <input type="submit" value="Click"> <!-- Value changes the text from submit to desired -->
+         <button>Click</button>            <!-- Alternative with same function as Submit input -->
+         
+         <br><br>
+         <label for="email">Enter your email</label>
+         <input type="text" id="email" placeholder="abc@gmail.com">   <!-- Faded text to hint user and automatically disappears-->
+         <br><br>
+         <label for="email">Enter your email</label>
+         <input type="text" id="email" value="harsh@gmail.com">       <!-- Already filled detail -->
+    </form>
+</fieldset>
+        <br><br>Form elements::Label,input,select,option,button,textarea,fieldset,legend<br><br>
+<fieldset>
+    <legend>Form element uses</legend>
+    <form>
+        <label for="calender">Select a date</label>
+        <input type="date"  id="calender">   <!-- date input is for calender -->
+        <br><br>
+        <label for="dish">Select an item</label>
+        <select name="Dishes" id="dish">    <!-- select provides drop down arrow -->
+            <option value="Maggi">Maggi</option>   <!-- Items of list are fed with option -->
+            <option value="Pasta">Pasta</option>
+            <option value="Kurkure">Kurkure</option>
+        </select>
+        <br><br>
+        <button>Mai hu button</button>
+        <br><br>
+        <!-- textarea:Provide space for multiline input -->
+        <textarea name="Area" id="Area" cols="20" rows="5" placeholder="Enter text"></textarea>
+    </form>
+</fieldset>
+
+    <form>
+        <fieldset>     <!-- Field set enclose its content in a box -->
+            <legend>Details</legend>   <!-- Legend gives name to a fieldset -->
+            <label for="Name">Enter your name</label>
+            <input type="text" placeholder="Name" id="Name">
+        </fieldset>
+    </form>
+</body>
+</html>

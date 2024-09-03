@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * 
+      {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body
+      {
+        height: 100%;
+        width: 100%;
+      }
+      .container1
+      {
+        border: solid black 2px;
+        margin: 10px;
+        background-color: grey;
+        height: 100vh;
+        width: 100vw;
+        display: grid;    
+        padding: 4rem;
+        row-gap: 1rem;   /* Add gaps between rows */
+      }
+      .item1
+      {
+        background-color: aquamarine;
+        border: solid black 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container2
+      {
+        border: solid black 2px;
+        margin: 10px;
+        background-color: grey;
+        height: 100vh;
+        width: 100vw;
+        display: grid;    
+        padding: 4rem;
+        row-gap: 1rem;   /* Add gaps between rows */
+        column-gap: 1rem;   /* Add gaps between columns */
+        /* Shorthand prop-:   gap: 1rem;    */
+        grid-template-rows: 1fr 1fr;  /* Tells the number of rows and their relative sizes */
+        /* grid-template-columns: 1fr 1fr 1fr;*/    /* Tells the number of columns and their relative sizes */
+        grid-template-columns: repeat(3,1fr);    /*  Shortcut  */
+        /* fr will distribute the area according to the area and its part  */
+      }
+      .item2
+      {
+        background-color: aquamarine;
+        border: solid black 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container3
+      {
+        background-color: grey;
+        height: 100vh;
+        width: 100vw;
+        display: grid;    
+        padding: 4rem;
+        gap: 1rem;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,1fr);
+        border: solid black 2px;
+        margin: 10px;
+      }
+      .item3
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+        border: solid black 2px;
+      }
+      
+      @media (min-width:500px)
+      {
+        .container3
+        {
+        background-color: grey;
+        height: 100vh;
+        width: 100vw;
+        display: grid;    
+        padding: 4rem;
+        gap: 1rem;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        border: solid black 2px;
+        margin: 10px;
+        }
+        .item3
+        {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+        border: solid black 2px;
+        }
+        .header,.footer
+        {
+        grid-column-start: 1;   /* Stretch to all columns */
+        grid-column-end: 4;
+        }
+        .sidebar
+        {
+        grid-row-start: 2;     /* Stretch to 2 rows */
+        grid-row-end: 4;
+        }
+        .c1
+        {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        }
+
+        .container4
+        {
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            justify-items: center;   /* Common for all elements inside unles overridden (test).For x-axis */
+            align-items:flex-end;    /* For y-axis */
+            background-color: grey;
+            border: 2px solid black;
+            margin: 10px;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(4,1fr);
+            gap: 1rem;
+            padding: 4rem;
+        }
+        .test
+        {
+            background-color: aquamarine;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item4
+        {
+            background-color: aquamarine;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* width: 10%; */
+            /* height: 80%; */
+            justify-self: end;    /* Allignment in x-axis of particular element*/
+            align-self: stretch;      /* Allignment in y-axis of particular element*/
+            /* Shortcut for writing both together-: place-self: end; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="item1">ITEM 1</div>
+      <div class="item1">ITEM 2</div>
+      <div class="item1">ITEM 3</div>
+      <div class="item1">ITEM 4</div>
+      <div class="item1">ITEM 5</div>
+      <div class="item1">ITEM 6</div>
+    </div>
+    <div class="container2">
+        <div class="item2">ITEM 1</div>
+        <div class="item2">ITEM 2</div>
+        <div class="item2">ITEM 3</div>
+        <div class="item2">ITEM 4</div>
+        <div class="item2">ITEM 5</div>
+        <div class="item2">ITEM 6</div>
+      </div>
+      <div class="container3">
+        <div class="item3 header">Header</div>
+        <div class="item3 sidebar">Sidebar</div>
+        <div class="item3 c1">Content-1</div>
+        <div class="item3 c2">Content-2</div>
+        <div class="item3 c3">Content-3</div>
+        <div class="item3 footer">Footer</div>
+      </div>
+      <div class="container4">
+        <div class="item4">ITEM 1</div>
+        <div class="item4">ITEM 2</div>
+        <div class="item4">ITEM 3</div>
+        <div class="test">ITEM 4</div>
+      </div>
+  </body>
+</html>

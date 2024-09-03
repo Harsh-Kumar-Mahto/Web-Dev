@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- Internal CSS :To increase priority,write !important-->
+    <style>
+        h1{color: chartreuse;}   /* h1,p,h2 are element selectors here */
+        p{background-color:red;}
+        h2{background-color: blueviolet;}  /* Doesn't affect inline CSS yellow colour */
+        h2{background-color: cyan !important;}
+        /* This will be prioritised and yellow colour gets changed */
+    </style>
+
+<!-- External CSS:Link external stylesheet -->
+    <link rel="stylesheet" href="1_Selectors.css">
+
+</head>
+<body>
+    
+    <h1>Welcome to CSS(Cascading Style Sheet)</h1>
+    
+    <!-- Inline CSS :Most priority but not to be used a lot-->
+    <p style="background-color: yellow;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem asperiores, velit molestias totam adipisci illum repellat officiis illo quia.</p>
+    <p style="color: aqua;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos non et aliquid soluta quam ullam mollitia recusandae, expedita voluptas distinctio?</p>
+    
+    <!-- Internal CSS :In head section(Line 7 to 14)-->
+    <h2 style="background-color: yellow;">Increase imp of Internal CSS</h2>
+
+    <!-- External CSS :External CSS file linked to this HTML file(index.css file in 16th line) -->
+    <h3>External CSS</h3>
+
+    <!-- Priority of internal and external is based on order in th ehead tag -->
+
+
+    <!-- Selectors:In 1_Selectors.css -->
+    <!-- Element selector -->
+    <br>
+    <h7>Element selector</h7><br>
+    <h7>Apply effect to all elements of that type</h7>
+    <br><br>
+
+    <!-- Id selector -->
+    <h7 id="id1">Id selector</h7><br>
+    <h7>Apply only to that particular id</h7>
+    <br><br>
+    
+    <!-- Class selector -->
+    <p class="same">Class selector</p>
+    <p class="same">These paragraphs are of same class</p>
+    <p class="same">Effects are applied to all elements of same class</p>
+    <p>This is not of same class so not italic</p>
+    <br><br>
+    <!-- There is red background due to internal css on line10 -->
+
+    <!-- Group selector -->
+    <h4>Group Selector</h4>
+    <h5>Different elements could be selected and styled together</h5>
+
+    <!-- Universal selector -->
+    <h6>Universal selector</h6>
+    <section>Selects all the elements at once,examlple in 5_Box.html</section>
+
+
+</body>
+</html>

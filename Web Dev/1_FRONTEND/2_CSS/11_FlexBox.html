@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            background-color: beige;
+            height: 600px;
+            border: 4px solid black;
+            display: flex;    /* Will make this class a flex and all the elements inside will become flexitems */
+            /* flex-direction: row,row-reverse,column-reverse,column;  Different directions of orientation are there.By default it is row */
+            flex-wrap: nowrap;   /* By default it is no wrapping,wrap will send the last element to next line and wrap reverse will send the last element to upper line */
+            justify-content: space-around;   /* Different item placements according to main axis which is horizontal in this case */
+            align-items:center ;     /* Different item placements according to cross axis which is vertical in this case */
+            align-content:center ;   /* Placement of content & Spacing in between multiple lines of a content can be managed */
+        }
+        .box
+        {
+            border: 1px solid brown;
+            height: 200px;
+            width: 200px;
+            margin: 2px;
+            padding: 2px;
+        }
+        /* 
+        Flex items can be controlled by following properties::
+        1.order: Sequence of position of different flex items w.r.t one another
+        2.flex shrink:Speed of squeezing w.r.t one another.
+               NOTE:flex wrap must of off for shrink
+        3.flex grow:Occupy more remaining space w.r.t one another.
+        4.flex basis:Set the dimension of the flex item along the main axis only
+        5.align self:Alignment of flex item along cross axis
+        */
+        #box1
+        {
+            background-color: aqua;
+            font-size: 20px;
+            order: 5;     /* First box will move to the end */
+            flex-grow: 5; /* First box which is at end will occupy the remaining space 5 times of others */
+        }
+        #box2
+        {
+            background-color: blue;
+            font-size: 20px;
+            flex-shrink: 10;  /* Second box which is at first will shrink 5 times faster as that of others */
+        }
+        #box3
+        {
+            background-color: blueviolet;
+            font-size: 20px;
+            flex-basis: 400px;  /* Size of box 3 is 400px in main/x axis */
+        } 
+        #box4
+        {
+            background-color: orange;
+            font-size: 20px;
+            align-self: end;  /* Box 4 will move to the end w.r.t cross axis i.e bottom */
+
+        }   
+        #box5
+        {
+            background-color: greenyellow;
+            font-size: 20px;
+        }   
+        
+        </style>
+</head>
+<body>
+        <div class="container">
+            <div class="box" id="box1">Flex:Makes a responsive design,content automatically squeze and adjust according to screen size</div>
+            <div class="box" id="box2">Flex Wrap:width doesn't squeze unless space is there,they will shift to another line on screen</div>
+            <div class="box" id="box3">When flex direction is row main axis is horizontal and when it is column main axis is vertical</div>
+            <div class="box" id="box4">Justify content:Place the elements and items according to main axis</div>
+            <div class="box" id="box5">Align items:Place the elements and items according to cross axis <br><br>Align content:Manages the placement of content & spacing in between multiple lines of the content</div>
+        </div>
+    <!-- Game at codehelp website -->
+    <!-- /* Shorthand notation flex flow & flex */ -->
+</body>
+</html>

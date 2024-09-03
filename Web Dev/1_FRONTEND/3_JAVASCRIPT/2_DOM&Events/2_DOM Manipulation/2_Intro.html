@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="2_Style.css">
+</head>
+<body>
+    <div>
+        <h3 class="heading" id="heading1">Selecting with id</h3>
+    <p>document.getElementById("myId")</p>
+    <h3 class="heading" id="heading2">Selecting with class</h3>
+    <p>document.getElementByClassName("myClass")</p>
+    <h3 class="heading" id="heading3">Selecting with tag</h3>
+    <p>document.getElementByTagName("p")</p>
+    <h3 class="heading">Query Selector: Replacement of all types mentioned above</h3>
+    <p>document.querySelector("myId/.myClass/tag")  : This will return the first element</p>
+    <p>document.querySelectorAll("myId/.myClass/tag")  :This will return a Nodelist containing all elements with that specification</p>
+    <span>**Point to be noted is that for classes we have to use . and for id we have to use #</span>
+    <script src="2_Script.js"></script>
+    </div>
+
+    <h2>Properties:</h2>
+    <ul>
+        <li>tagName:returns tag for element nodes</li>     <!-- Write elementName.tagName in the console -->
+        <li>innerText:returns the text content of the element and all its children</li>     <!-- .firstChild,.lastChild,.children[i] -->
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="6_style.css">
+</head>
+<body>
+    <h1>Events in JS</h1>
+    <p>Change in state of an object is known as an Event</p>
+    <p>Events are fired to notify code of "interesting changes" that may affect code execution</p>
+    <ul>
+        <li>Mouse events(click,double click etc)</li>
+        <li>Keyboard events(keypress,keyup,keydown)</li>
+        <li>Form events(submit,etc.)</li>
+        <li>Print event & many more</li>
+    </ul>
+
+    <!-- 1.Inline event handling:We are handling different kinds of events in there respective tags  -->
+    <!-- Drawback is the lengthyness of the code -->
+    <h1>Inline Event Handling</h1>
+    <button onclick="console.log('Button was clicked');alert('hello')">Click me!</button>
+    <button ondblclick="console.log('Button was clicked');alert('hello')">Click me twice!</button>
+    <br><br><div onmouseover="console.log('mouse inside div')">This div will track hover of mouse</div>
+
+    <!-- 2.JS handling:More priority and is better -->
+    <!-- Drawback is that we can handle only one function at a time -->
+    <h1>JS Event Handling</h1>
+    <br><br><div id="event">Event handled in JS file</div>
+
+
+    <h1>Event Object</h1>
+    <p>Every event has a special object that has details about it</p>
+    <p>All event handlers have access to the Event Objec's properties and methods</p>
+
+    <!-- 3.Event Listeners -->
+    <!-- Same event can be addressed multiple times -->
+    <h1>Event Listener</h1>
+    <br><br><div id="box1">Event handled in JS file</div>
+    <!-- We can remove the eventListener in the same way we added it and the callback function should be same -->
+
+    <script src="6_script.js"></script>
+</body>
+</html>

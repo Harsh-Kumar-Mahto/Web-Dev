@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .animation
+        {
+            height: 90vh;
+            width: 80vw;
+            border: 2px solid black;
+            background-color: cyan;
+            margin: 3px;
+            padding: 3px;
+        }
+        #box1
+        {
+            border: 1px solid black;
+            height: 40px;
+            width: 20%;
+            background-color: greenyellow;
+            position: relative;
+            animation-name: right;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        @keyframes right 
+        {
+            from
+            {
+                top: 0;
+                left: 0;
+            }
+            to
+            {
+                top: 0;
+                left: 64vw;
+            }
+        }
+        #circle
+        {
+            border: 2px solid black;
+            border-radius: 100%;
+            height: 30px;
+            background-color:blueviolet;
+            width: 30px;
+            position: relative;
+            top: 50px;
+            left: 290px;
+            animation: 5s ease-in-out 2s infinite alternate none running jump; /* animation: duration|easinf function|delay|iteration|direction|fill-mode|play-state|name; */
+        }
+        @keyframes jump
+        {
+            0%
+            {
+                top: 50px;
+                left: 290px;
+            }
+            25%
+            {
+                top: 15px;
+                left: 10px;
+            }
+            50%
+            {
+                top: 15px;
+                left: 650px;
+            }
+            75%
+            {
+                top: 125px;
+                left: 10px;
+            }
+            100%
+            {
+                top: 125px;
+                left: 650px;
+            }
+        }
+
+        #box2
+        {
+            border: 1px solid black;
+            height: 40px;
+            width: 20%;
+            top: 130px;
+            left: 64vw;
+            background-color: greenyellow;
+            position: relative;
+            animation-name: left;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+            animation: 5s linear 2s infinite alternate none running left;
+        }
+        @keyframes left 
+        {
+            from
+            {
+                top: 130px;
+                left: 64vw;
+            }
+            to
+            {
+                top: 130px;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animation">
+        <div id="box1"></div>
+        <div id="circle"></div>
+        <div id="box2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root  /* Custom variable usable throughout are declared here*/
+        {
+            --primary-color: aquamarine;
+            --custom-width:700px
+        }
+        .boxshadow
+        {
+            background-color: var(--primary-color);   /* Using custom values */
+            width: var(--custom-width);
+            height: var(--custom-height);   /* No significance as this custom var is not defined in this element  */
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+        }
+        .box
+        {
+            --custom-height:400px;
+            --custom-width: 20%;     /* Custom variable only usable in this element  */
+            width: var(--custom-width);
+            border: 1px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+        #box1
+        {
+            box-shadow: -2px 2px red;   /* vertical    horizontal    colour */
+        }
+        #box2
+        {
+            box-shadow: 2px 2px 5px blueviolet;  /* vertical    horizontal   blur radius    colour */
+        }
+        #box3
+        {
+            box-shadow: 2px -2px 5px 5px purple;   /* vertical    horizontal   blur radius   spread radius    colour */
+        }
+        #box4
+        {
+            box-shadow:inset -2px -2px 5px 2px rgb(234, 150, 5);
+        }
+        #box5
+        {
+            box-shadow: 2px 2px 2px 2px burlywood , 8px 8px black;
+        }
+
+        h1
+        {
+            text-shadow: 2px 2px 2px black;   /*1. vertical    horizontal   blur radius    colour */
+        }
+
+        p
+        {
+            text-shadow: blueviolet 2px 2px 2px; /*2. colour     vertical    horizontal   blur radius*/
+        }
+
+        span
+        {
+            text-shadow: 2px 2px 2px;
+        }
+
+        #multi
+        {
+            text-shadow: -2px -2px 2px green, 4px 4px 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxshadow">
+    <div class="box" id="box1">X and Y offset along with shadow colour only.-ve sign chages the direction of the shadow:top-down and left right</div>
+    <div class="box" id="box2">Addition to above:Blur radius,Greater the value (Only positive) larger the area of blur and lighter the colour</div>
+    <div class="box" id="box3">Addition to above:Spread radius,Greater the value more the shadow spreads in all directions</div>
+    <div class="box" id="box4">Inset shadow:Makes the shadow inside and not outside,rest all same options </div>
+    <div class="box" id="box5">Multiple shadow:Add more than one shadow to a single element just by using comma in between</div>
+    </div>
+
+    <div class="textshadow">
+        <h1>WELCOME!: first shadow syntax</h1>
+        <p>Second shadow syntax:In text shadow spread radius is not there,else same</p>
+        <span>If no colour specified,default black colour is used for shadow</span><br><br>
+        <div id="multi">Multiple text shadows could be added to single text</div>
+    </div>
+</body>
+</html>

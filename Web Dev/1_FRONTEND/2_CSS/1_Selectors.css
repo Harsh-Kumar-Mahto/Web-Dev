@@ -1,0 +1,32 @@
+h3  /* h3 is element selector here */
+{
+    text-align: center;
+    background-color: blue;
+    font-size:x-large;
+}
+
+/* Element selector */
+h7 
+{
+  color:deeppink;
+}
+
+/* Id selector */
+#id1
+{
+    color: darkorchid;
+    background-color:white;
+}
+
+/* Class selector */
+.same
+{
+    font-style: italic;
+}
+
+/* Group selector */
+h4,h5
+{
+    font: bold;
+    background-color: blanchedalmond;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            height: 100%;
+            width: 100%;
+        }
+        .container
+        {
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            padding: 2rem;
+            gap: 1rem;
+        }
+        .item
+        {
+            background-color: greenyellow;
+            border: 2px solid black;
+            height: 150px;
+            width: 150px;
+        }
+        #rotatex:hover
+        {
+            transform: rotateX(45deg);
+        }
+        #rotatey:hover
+        {
+            transform: rotateY(45deg);
+        }
+        #rotatez:hover
+        {
+            transform: rotateZ(45deg);
+        }
+        #translatex:hover
+        {
+            transform: translateX(100px);
+        }
+        #translatey:hover
+        {
+            transform: translateY(-100px);
+        }
+        #translatez:hover
+        {
+            transform:perspective(300px) translateZ(-100px);  /* We have to set perspective in order to see the changes */
+        }
+        #scalex:hover
+        {
+            transform: scaleX(1.5);
+        }
+        #scaley:hover
+        {
+            transform: scaleY(1.5);
+        }
+        #scalez:hover
+        {
+            transform: perspective(300px) rotateY(45deg) scaleZ(5) ;
+        }
+        #skewx:hover
+        {
+            transform:skewX(45deg);
+        }
+        #skewy:hover
+        {
+            transform:skewY(45deg);
+        }
+        /* #skewZ:hover    skewZ doesn't exist
+        {
+            transform:skewZ(45deg);
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- the item will rotate to a particular angle -->
+        <div class="item" id="rotatex">RotateX</div>
+        <div class="item" id="rotatey">RotateY</div>
+        <div class="item" id="rotatez">RotateZ</div>
+        <!-- the item will move to a particular direction -->
+        <div class="item" id="translatex">TranslateX</div>
+        <div class="item" id="translatey">TranslateY</div>
+        <div class="item" id="translatez">TranslateZ</div>
+        <!-- size of the item changes to a particular scale-->
+        <div class="item" id="scalex">ScaleX</div>
+        <div class="item" id="scaley">ScaleY</div>
+        <div class="item" id="scalez">ScaleZ</div>
+        <!-- the item gets tilt in a particular direction -->
+        <div class="item" id="skewx">SkewX</div>
+        <div class="item" id="skewy">SkewY</div>
+        <div class="item" id="skewz">SkewZ:Doesn't exist</div>
+    </div>
+</body>
+</html>

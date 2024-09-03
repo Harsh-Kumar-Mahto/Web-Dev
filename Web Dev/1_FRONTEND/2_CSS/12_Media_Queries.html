@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            background-color: antiquewhite;
+            border: 2px solid black;
+            height: 300px;
+            width: 300px;
+            display:inline-block;
+        }
+        .flex
+        {
+            display: flex;
+            flex-direction: column;
+            background-color: aquamarine;
+            border: 2px solid black;
+            height: 100px;
+            width: 300px;
+        }
+        #box1
+        {
+            border: 2px solid black;
+            display: inline;
+            height: 20px;
+            width:35px;
+        }
+        #box2
+        {
+            border: 2px solid black;
+            display: inline;
+            height: 20px;
+            width:35px;       
+        }
+        #box3
+        {
+            border: 2px solid black;
+            display: inline;
+            height: 20px;
+            width:35px;        
+        }
+        #box4
+        {
+            border: 2px solid black;
+            display: inline;
+            height: 20px;
+            width:35px;        
+        }
+        @media (min-width:300px) and (max-width:500px)   /* Other than this range default css would be applied */
+        {
+            .box
+            {
+                background-color: aqua;
+            }
+            .flex
+            {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Media query helps to apply css on different screens.
+    </div>
+    <div class="flex">
+        <div id="box1">box1</div>
+        <div id="box2">box2</div>
+        <div id="box3">box3</div>
+        <div id="box4">box4</div>
+    </div>
+</body>
+</html>

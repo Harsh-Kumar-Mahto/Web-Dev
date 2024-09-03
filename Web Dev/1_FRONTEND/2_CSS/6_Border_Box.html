@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            /*Type "display: inline;" to convert to inline */
+            width: 400px;
+            height: 100px;
+            border: solid red 3px;
+            box-sizing: border-box;/* Actual size of border remains constant and the content inside gets shrinked */
+            padding: 10px;
+            margin: 10px;
+        }
+        span
+        {
+            width: 400px;   /* Not applicable */
+            height: 100px;  /* Not applicable */
+            border: solid red 3px;
+            box-sizing: border-box;/* Actual size of border remains constant and the content inside gets shrinked */
+            margin: 10px;  /* Only apply in horizontal directions(Left and Right) */
+            padding: 2px;  /* Applicable but due to no vertical margin,they overlap */
+        }
+        #Blockspan
+        {
+            width: 400px;
+            height: 100px;
+            border: solid red 3px;
+            box-sizing: border-box;/* Actual size of border remains constant and the content inside gets shrinked */
+            padding: 10px;
+            margin: 10px;
+            display: block;  /* Changes span to block element */
+        }
+        #Inlineblock
+        {
+            width: 300px;
+            height: 400px;
+            border: solid red 3px;
+            box-sizing: border-box;/* Actual size of border remains constant and the content inside gets shrinked */
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            /* Inline element with ability to have customized height and width */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Display Block</h1>
+    <div>
+        Block elements like div,p,h1..etc  have following properties:
+    </div>
+    <div>
+        1.New line  2.Take whole width of the line  3.Respect custom height and width  4.Respect custom padding and margin
+    </div>
+
+    <h1>Display Inline</h1>
+    <span>
+        Inline elements like a,span.. have following properties:
+    </span>
+    <span>
+        1.Try to be in same line 2.Take width according to the content 3.No custom height or width applied 4.Custom padding is available but custom margin only apply in left and right.
+    </span>
+    <span id="Blockspan">Inline to block conversion can be done vice versa </span>
+
+    <h1>Display Inline Block</h1>
+    <span id="Inlineblock">This is originally an inline element but following block properties can be added to it</span>
+    <span id="Inlineblock">Custom height and width can be added to it but try to come in same line</span>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Universal Selector */
+        *
+        {
+            padding: 0px; /* Initially set all the paddings and margin to 0 and set accordingly */
+            margin: 0px;
+        }
+        h1
+        {
+            font-style:italic;
+            background-color: aquamarine;
+            width: 160px;
+            border:double black 5px;
+            padding: 20px 15px;         /* (y axis:top&bottom,x axis:right&left) */ 
+            margin: 60px;/* Apply on all direction,same syntax as padding for giving independent values */
+        }
+        p   /* No margin specified in p so it is 0 as of universal selector */
+        {
+            background-color: cyan;
+            width: 450px;
+            border: solid brown 3px;
+            padding: 20px 3px 15px 10px; /* (top,right,bottom,left) */
+            /* Same effect as below independent paddings */
+            /* padding-top: 20px;
+               padding-right: 3px;
+               padding-bottom: 15px; 
+               padding-left: 10px; */
+            /* padding: 20px 30px;    (y axis:top&bottom,x axis:right&left) */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Box Model</h1>
+
+    <p>1.Content:All the content of the box i.e. text img etc</p>
+
+    <p>2.Padding:Spacing between content and border</p>
+
+    <p>3.Border:Border of the box</p>
+
+    <p>4.Margin:Spacing between the border and the other box or edge of page</p>
+
+</body>
+</html>

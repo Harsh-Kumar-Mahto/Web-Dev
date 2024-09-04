@@ -1,3 +1,0 @@
-In the video 06 Virtual DOM, Fibre and reconciliation
-A github article is used to understand the theory of react fibre and reconciliation
-This is the link:https://github.com/acdlite/react-fiber-architecture

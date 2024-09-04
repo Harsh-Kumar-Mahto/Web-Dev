@@ -1,6 +1,0 @@
-function MyFile(){
-    return(
-        <h1>This is also my file</h1>
-    )
-}
-export default MyFile

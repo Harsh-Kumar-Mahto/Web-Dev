@@ -1,0 +1,15 @@
+"Virtual DOM" is a concept which is not used now a days but was very popular back then
+In Virtual DOM, js creates its own DOM(tree like structure) as that of browser and then
+whenever any change is done, not the whole browser DOM is repainted(page reload) but the trees are compared
+and the changed parts are updated.
+
+"Reconciliation" is the algorithm that react uses to diff one tree with another to determine which part needs to be changed.
+Behind the scene, this is the algorithm which is considered as the Virtual DOM
+
+But when changes are made too fast that best option is to hold some changes and directly update the final change
+there was a need of more optimized technique that can hold for some time so it does not need to apply changes again and again
+This implementation is called the "React Fibre". It does following things:
+1.Pause work and come back to it later.
+2.Assign priority to different types of work.
+3.Reuse previously completed work.
+4.Abort work if it's no longer needed.

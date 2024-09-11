@@ -29,9 +29,9 @@ function App() {
 
   return (
     <ThemeProvider value={{themeMode,lightTheme,darkTheme}}>  {/* As there is no themeprovider, we have to take val props here only now all the components inside this can use the data in the context file */}
-      <h1 className="bg-cyan-500 text-green-900 font-bold p-4 text-2xl">Theme Switcher</h1>
       <div className="flex flex-wrap min-h-screen items-center">
         <div className="w-full">
+          <h1 className="bg-cyan-500 mb-3 w-full text-green-900 font-bold p-4 text-2xl">Theme Switcher</h1>
           <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
             <ThemeButton />
           </div>

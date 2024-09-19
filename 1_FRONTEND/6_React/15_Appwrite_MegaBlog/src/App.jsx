@@ -1,15 +1,47 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import {useDispatch} from 'react-redux'
 import './App.css'
+import authService from './appwrite/auth'
+import {login, logout} from './store/authSlice'
+import { Header,Footer } from './components'
+import {Outlet} from 'react-router-dom'
 
 function App() {
+  // console.log(import.meta.env.VITE_APPRITE_URL)
+  const [loading, setLoading] = useState(true)
+  const dispatch = useDispatch()
 
-  console.log(import.meta.env.VITE_APPRITE_URL)
+  useEffect(() => {
+    authService.getCurrentUser()
+    .then((userData) => {
+      if(userData){
+        dispatch(login({userData}))
+      }
+      else{
+        dispatch(logout())
+      }
+    })
+    .finally(() => {setLoading(false)})
+  },[])
 
-  return (
-    <>
-      <h1>Hello</h1>
-    </>
-  )
+  if(loading){
+    return(
+      null
+    )
+  }
+  else{
+    return(
+      <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+        <div className='w-full block'>
+          <Header />
+          <main>
+            <Outlet />
+          </main>
+          <Footer />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App

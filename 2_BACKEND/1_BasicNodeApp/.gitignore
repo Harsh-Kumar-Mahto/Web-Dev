@@ -1,0 +1,4 @@
+# Environment variable need to be safeguarded
+.env
+# This file can easily be installed so we don't need need to provide it to github
+node_modules   

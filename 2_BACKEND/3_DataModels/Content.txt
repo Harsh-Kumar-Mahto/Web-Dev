@@ -1,0 +1,4 @@
+All the contents of the data models are practiced in Stackblitz where 
+we practiced models of todo, ecommerce and hospital management systems.
+
+This is the link for the Stackblitz project: https://stackblitz.com/edit/stackblitz-starters-dhxnkc?file=README.md

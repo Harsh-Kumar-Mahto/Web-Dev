@@ -1,3 +1,5 @@
+# files which should not be formatised by the prettier
+
 /.vscode
 /node_modules
 ./dist

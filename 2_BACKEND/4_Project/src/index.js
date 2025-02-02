@@ -1,12 +1,14 @@
-// require('dotenv').config({path: './env'})
-
-import dotenv from "dotenv";
 import connectDB from "./db/index.js";
-import mongoose from "mongoose";
+import express from "express";
+import dotenv from "dotenv";
 
-dotenv.config({
+// require('dotenv').config({path: './env'})      //This will do the work properly but for consistency we don't want to use import and require both so we use alternative
+
+dotenv.config({   //additional line in the dev of package.json file, we are using this as an experimental feature
   path: "./env",
 });
+
+const app = express();
 
 connectDB()
   .then(() => {

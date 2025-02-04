@@ -1,5 +1,5 @@
 import connectDB from "./db/index.js";
-import express from "express";
+import app from "./app.js";
 import dotenv from "dotenv";
 
 // require('dotenv').config({path: './env'})      //This will do the work properly but for consistency we don't want to use import and require both so we use alternative
@@ -8,19 +8,17 @@ dotenv.config({   //additional line in the dev of package.json file, we are usin
   path: "./env",
 });
 
-const app = express();
-
-connectDB()
+connectDB()           //function call to connect to database
   .then(() => {
-    app.on("error", (error) => {
+    app.on("error", (error) => {           //in case there is a problem in communication after a successful connection
       console.log("ERROR:", error);
       throw error;
     });
-    app.listen(process.env.PORT || 8000, () => {
+    app.listen(process.env.PORT || 8000, () => {       //backend is listening
       console.log(`Running at port ${process.env.PORT}`);
     });
   })
-  .catch((err) => {
+  .catch((err) => {        //in case of any error
     console.log("MongoDB connection failed:", err);
   });
 

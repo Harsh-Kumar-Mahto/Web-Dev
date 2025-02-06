@@ -66,7 +66,7 @@ userSchema.pre("save", async function (next) {
   //we are using pre middleware(also known as pre and post hooks which are basically plugins) here to just before save so that the password gets encrypted just before getting saved/changed, along with this a callback function is needed which must not be arrowfunction as they don't have the current context so we will not be able to use "this"
   if (!this.isModified("password")) return next(); //checking if the password is altered or not, if the password is not altered or saved (any other changes) we must not do anything to the password and pass the flag to next
 
-  this.password = bcrypt.hash(this.password, 10); //if changes are done, hash the password using bcrypt and 10 is some number of rounds and then pass the flag to next
+  this.password = await bcrypt.hash(this.password, 10); //if changes are done, hash the password using bcrypt and 10 is some number of rounds and then pass the flag to next
   next();
 });
 

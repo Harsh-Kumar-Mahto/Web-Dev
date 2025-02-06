@@ -21,7 +21,7 @@ app.use(cookieParser());    //to access and set the cookies from the user's brow
 import userRouter from "./routes/user.routes.js";
 
 // routes declaration
-app.use("/api/v1/users", userRouter);
+app.use("/api/v1/users", userRouter);    //this is a convention to write routes, after this the route will be forwarded to userRouter and this will act as prefix
 
 
 export default app;

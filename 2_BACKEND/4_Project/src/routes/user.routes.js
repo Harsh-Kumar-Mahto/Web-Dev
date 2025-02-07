@@ -1,6 +1,7 @@
 import { Router } from "express";
-import {registerUser} from "../controllers/user.controller.js";
+import {registerUser, loginUser, logoutUser} from "../controllers/user.controller.js";
 import {upload} from "../middlewares/multer.middleware.js"
+import {verifyJWT} from "../middlewares/auth.middleware.js"
 
 const router = Router()
 
@@ -14,5 +15,10 @@ router.route("/register").post(upload.fields([      //we are using the upload mu
         maxCount : 1,
     }
 ]),registerUser)    //this is additional route after /api/v1/users and will call registerUser that will work on post request
+
+router.route("/login").post(loginUser)
+
+//secure route
+router.route("/logout").post(verifyJWT,logoutUser);  //first verifyJWT is called then next passes the control to logoutUser
 
 export default router

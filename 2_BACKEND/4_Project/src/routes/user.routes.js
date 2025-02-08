@@ -31,7 +31,7 @@ router.route("/login").post(loginUser)
 //secure route
 router.route("/logout").post(verifyJWT, logoutUser);  //first verifyJWT is called then next passes the control to logoutUser
 router.route("/refresh-token").post(refreshAccessToken);
-router.route("change-password").post(verifyJWT, changeCurrentPassword);
-router.route("get-user").post(verifyJWT, getCurrentUser);
+router.route("/change-password").post(verifyJWT, changeCurrentPassword);
+router.route("/get-user").post(verifyJWT, getCurrentUser);
 
 export default router

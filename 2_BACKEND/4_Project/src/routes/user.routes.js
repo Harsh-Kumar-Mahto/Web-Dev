@@ -4,6 +4,11 @@ import {
   loginUser,
   logoutUser,
   refreshAccessToken,
+  changeCurrentPassword,
+  getCurrentUser,
+  updateAccountDetails,
+  updateAvatar,
+  updateCoverImage,
 } from "../controllers/user.controller.js";
 import {upload} from "../middlewares/multer.middleware.js"
 import {verifyJWT} from "../middlewares/auth.middleware.js"
@@ -26,5 +31,7 @@ router.route("/login").post(loginUser)
 //secure route
 router.route("/logout").post(verifyJWT, logoutUser);  //first verifyJWT is called then next passes the control to logoutUser
 router.route("/refresh-token").post(refreshAccessToken);
+router.route("change-password").post(verifyJWT, changeCurrentPassword);
+router.route("get-user").post(verifyJWT, getCurrentUser);
 
 export default router
